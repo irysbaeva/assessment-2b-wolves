@@ -1,0 +1,21 @@
+<div>WELCOME TO THE PARTY WORLD!</div>
+
+<a href="/parties/new">Let`s have your own party</a>
+
+<main role="main">
+    <ul>
+        {{#each parties}}
+        <li>
+            <a href="/parties/{{id}}">{{name}}</a><br>
+            <span>Location: {{location}}</span><br>
+            <span>Starts At: {{startsAt}}</span><br>
+            <span>Added at: {{createdAt}}</span><br>
+
+            <span>Host:</span>
+            <span id="host"><a href="parties/{{host._id}}/host">
+                    {{host.name}}</a></span>
+
+        </li>
+        {{/each}}
+    </ul>
+</main>

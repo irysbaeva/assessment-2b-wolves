@@ -1,0 +1,19 @@
+<h1>{{party.name}}</h1>
+
+
+{{!-- <span>Added at: {{party.createdAt}}</span><br> --}}
+<span>Location: {{party.location}}</span><br>
+<span>Starts at: {{party.startsAt}}</span><br>
+
+<ul class="no-bullets no-padding mar-t-2">
+    <li>
+        <a href="/parties/{{ party.id }}/edit">edit</a>
+    </li>
+
+    <li>
+        <form method="post" action="/parties/{{party.id}}">
+
+            <button class="delete" type="button" value="delete">Delete</button>
+        </form>
+    </li>
+</ul>

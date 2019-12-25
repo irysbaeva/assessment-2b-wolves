@@ -1,0 +1,26 @@
+<h1>Let`s have a party</h1>
+
+{{#if errors}}
+<span>Something went wrong:</span>
+<ul class="error-list pad-b-2">
+    {{#each errors as |error|}}
+    <li class="error-item">{{error}}</li>
+    {{/each}}
+</ul>
+{{/if}}
+
+
+<form method="post" action="/parties/new">
+    <label for="name-input">Name:</label>
+    <input id="name-input" name="name" type="text" tabindex="1">
+<br>
+    <label for="location-textarea">Location:</label>
+    <textarea id="location-textarea" name="location" tabindex="2"></textarea>
+<br>
+    <label for="startsAt-textarea">Starts At:</label>
+
+    <input type="date" id="startsAt" name="startsAt"  min="2019-01-01" max="2023-12-25">
+    {{!-- <textarea type="date" id="startsAt-textarea" name="startsAt" tabindex="2"></textarea> --}}
+<br>
+    <input type="submit" value="Publish" tabindex="3">
+</form>

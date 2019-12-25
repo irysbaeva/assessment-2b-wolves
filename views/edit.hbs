@@ -1,0 +1,23 @@
+<h1>Change your party</h1>
+
+{{#if errors}}
+<span>Something went wrong:</span>
+<ul class="error-list pad-b-2">
+    {{#each errors as |error|}}
+    <li class="error-item">{{error}}</li>
+    {{/each}}
+</ul>
+{{/if}}
+
+<form method="post" action="/parties/{{party.id}}">
+    <input type="hidden" name="_method" value="put">
+
+    <label for="title-input">Name:</label>
+    <input id="title-input" name="name" type="text" value="{{party.name}}">
+
+    <label for="location-input">location:</label>
+    <input id = "location-input" name="location" value = "{{party.location}}">
+  <label for="startsAt" >Starts at:</label>
+<input id = "startsAt" type="date" value = "{{party.startsAt}}" id="startsAt" name="startsAt" min="2019-01-01" max="2023-12-25">
+    <input type="submit" value="Update">
+</form>

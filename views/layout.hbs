@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script defer src="/js/application.js"></script>
+
+    <title>New</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <nav>
+                <ul>
+                    {{#if loggedin}}
+                    <li> <a href="/">parties</a></li>
+                    <li> <a href="/parties/new">new party</a></li>
+                    <li> <a href="/logout">log out</a></li>
+                    {{else}}
+                    <li> <a href="/">parties</a></li>
+                    <li> <a href="/login">login</a></li>
+                    <li><a href="/registration">registration</a></li>
+
+                    {{/if}}
+                </ul>
+            </nav>
+
+            <div>
+
+                <h1>POLTUCK PARTY</h1>
+            </div>
+        </div>
+    </header>
+    <div>
+        <div>
+            {{{body}}}
+        </div>
+    </div>
+</body>
+
+
+</html>
